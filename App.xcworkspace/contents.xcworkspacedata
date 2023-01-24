@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:GymGame/GymGame.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Onboarding/Onboarding.xcodeproj">
+   </FileRef>
+</Workspace>
