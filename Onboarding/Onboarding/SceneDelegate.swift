@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  GymGame
+//  Onboarding
 //
 //  Created by Fernando Moreira on 23/01/23.
 //
@@ -11,29 +11,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        let tabBarController = UITabBarController()
-        tabBarController.tabBar.backgroundColor = Colors.appPrimary
-        tabBarController.tabBar.tintColor = Colors.appPurple
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = UIWindow(windowScene: windowScene)
-        
-        self.window?.rootViewController = tabBarController
-        self.window?.makeKeyAndVisible()
-        
-        let homeVC = HomeVC()
-        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        
-        let profileVC = ProfileVC()
-        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
-        
-        let firstNavigationController = UINavigationController(rootViewController: homeVC)
-        let secondNavigationController = UINavigationController(rootViewController: profileVC)
-                
-        tabBarController.viewControllers = [firstNavigationController, secondNavigationController]
+        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
